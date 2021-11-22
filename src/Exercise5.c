@@ -17,14 +17,14 @@ Ex:
 
 void Ex5(char *str){
 	//Your codes here
-	int i, cor = 0;
-	for (i = 0; i < strlen(str); i++){
-		if (str[i] == '(' && str[strlen(str)-i-1] == ')') cor = 1;
-		if (str[i] == '{' && str[strlen(str)-i-1] == '}') cor = 1;
-		if (str[i] == '[' && str[strlen(str)-i-1] == ']') cor = 1;
+	int i,cor=0;
+	for (i=0;i<strlen(str);i++){
+		if (str[i]=='{' && str[strlen(str)-i-1]!='}') cor=1;
+		if (str[i]=='[' && str[strlen(str)-i-1]!=']') cor=1;
+		if (str[i]=='(' && str[strlen(str)-i-1]!=')') cor=1;
 	}
-    if (cor == 1) printf("Valid!");
-	if (cor == 0) printf("Invalid!");
+	if (cor==0){printf("Valid!");}
+	if (cor==1){printf("Invalid!");}
 
 }
 

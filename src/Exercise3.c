@@ -13,11 +13,23 @@ Ex:
 #include <math.h>
 #include <string.h>
 
+
 void Ex3(char *str){
 	//Your codes here
-	
-}
+	int i;
+	char max [100] ,min[100];
+	for (i = 0 ; i < strlen(str); i++){
+			if (strlen(max) < strlen(str)){
+				strcpy(max, str);
+			}
+			if (strlen(min) > strlen(str)){
+				strcpy(min, str);
+			}
+		}
+    printf("Shortest word: %s\n", min);
+	printf("Longest word: %s", max);
 
+}
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
 	char *testcase = argv[1];
